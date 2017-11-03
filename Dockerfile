@@ -16,14 +16,10 @@ RUN conda install bowtie2
 
 WORKDIR /home/biodocker
 
-COPY MELTv2.1.3.tar.gz .
-
-RUN tar zxf MELTv2.1.3.tar.gz
+COPY MELT.jar .
 
 COPY MELT bin
 
 WORKDIR /data
 
-ENTRYPOINT ["MELT"]
-CMD ["Single"]
-
+CMD ["MELT", "Single"]
