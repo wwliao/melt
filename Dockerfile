@@ -12,7 +12,7 @@ LABEL tags="Genomics"
 
 MAINTAINER Wen-Wei Liao <wen-wei.liao@wustl.edu>
 
-RUN conda install bowtie2
+RUN conda install bowtie2 samtools
 
 WORKDIR /home/biodocker
 
