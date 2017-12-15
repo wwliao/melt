@@ -3,7 +3,7 @@ FROM biocontainers/biocontainers:latest
 LABEL base.image="biocontainers:latest"
 LABEL version="1"
 LABEL software="MELT"
-LABEL software.version="2.1.3"
+LABEL software.version="2.1.4"
 LABEL description="the mobile element locator tool"
 LABEL website="http://melt.igs.umaryland.edu/index.php"
 LABEL documentation="http://melt.igs.umaryland.edu/manual.php"
@@ -20,6 +20,6 @@ COPY MELT.jar .
 
 COPY MELT bin
 
-WORKDIR /data
+WORKDIR /mnt/data
 
-CMD ["MELT", "Single"]
+USER root
